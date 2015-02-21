@@ -1,0 +1,89 @@
+Python 3.4.2 (v3.4.2:ab2c023a9432, Oct  6 2014, 22:15:05) [MSC v.1600 32 bit (Intel)] on win32
+Type "copyright", "credits" or "license()" for more information.
+>>> def square(x):
+	return x*x
+
+>>> square(156):
+	
+SyntaxError: invalid syntax
+>>> square(123)
+15129
+>>> #you can use python for do simple calculating like four operations.\
+>>> 45+12
+57
+>>> 45*23
+1035
+>>> 13-1
+12
+>>> 12/12
+1.0
+>>> 23***3
+SyntaxError: invalid syntax
+>>> 23**3
+12167
+>>> #"**" these signs are for make involution operations.
+>>> 
+>>> 100%12
+4
+>>> # Now I will show examples of 4 numeric types
+>>> type(11)
+<class 'int'>
+>>> type(11.0)
+<class 'float'>
+>>> type(11-3j)
+<class 'complex'>
+>>> type(true)
+Traceback (most recent call last):
+  File "<pyshell#20>", line 1, in <module>
+    type(true)
+NameError: name 'true' is not defined
+>>> boolean
+Traceback (most recent call last):
+  File "<pyshell#21>", line 1, in <module>
+    boolean
+NameError: name 'boolean' is not defined
+>>> #okay /i think we have only 3 types of numeric :D
+>>> #Now I will Show some useful devices for turn the numbers more readeable.
+>>> #First, I want to define this useful things ==> "round":
+>>> #	its round off the numbersLet's look at the examples,
+>>> round (10.3)
+10
+>>> round (19.92)
+20
+>>> # I think now you can understand what is the mission of this operator.
+>>> # Let's look at the other one ==> ""# :
+>>> # Let's look at the other one ==>"abs" its for absolute value or magnitude of x
+>>> abs(-2489)
+2489
+>>> # Okay now I want to talk about some simple variables
+>>> s1= "mon"
+>>> s2="ster"
+>>> s3="th"
+>>> s4="eat"
+>>> s5=s1+s2
+>>> s6=s1+s3
+>>> indent
+Traceback (most recent call last):
+  File "<pyshell#39>", line 1, in <module>
+    indent
+NameError: name 'indent' is not defined
+>>> s6, s4, s5
+('month', 'eat', 'monster')
+>>> s5 s4 s6
+SyntaxError: invalid syntax
+>>> s6 + s4
+'montheat'
+>>> s5, s4, s6
+('monster', 'eat', 'month')
+>>> s4 * 5
+'eateateateateat'
+>>> "=" * 134
+'======================================================================================================================================'
+>>> s6(3)
+Traceback (most recent call last):
+  File "<pyshell#46>", line 1, in <module>
+    s6(3)
+TypeError: 'str' object is not callable
+>>> s6[2]
+'n'
+>>> 
