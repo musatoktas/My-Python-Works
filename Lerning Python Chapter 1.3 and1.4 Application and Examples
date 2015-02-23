@@ -1,0 +1,144 @@
+Python 3.4.2 (v3.4.2:ab2c023a9432, Oct  6 2014, 22:15:05) [MSC v.1600 32 bit (Intel)] on win32
+Type "copyright", "credits" or "license()" for more information.
+>>> # Today we will applicate Chapter 1_3, and Capter 1_4
+>>> # Lets write a list!
+>>> movies = ["God Father", "Inception", "Rush our"]
+>>> movies.insert(3,1998)
+>>> print(cast)
+Traceback (most recent call last):
+  File "<pyshell#4>", line 1, in <module>
+    print(cast)
+NameError: name 'cast' is not defined
+>>> print(movies)
+['God Father', 'Inception', 'Rush our', 1998]
+>>> #movies.insert function is work for add member in to the list.
+>>> movies.insert(1,1976)
+>>> movies.insert(3,1996)
+>>> movies.remove(1998)
+>>> # we now from chapter1_2 movies.remove()work for delete member of the list
+>>> movies.insert(2011)
+Traceback (most recent call last):
+  File "<pyshell#11>", line 1, in <module>
+    movies.insert(2011)
+TypeError: insert() takes exactly 2 arguments (1 given)
+>>> #we should use add member to directly into the list this function."movies.append"
+>>> movies.append(2011)
+>>> #now we will see production dates after the film names
+>>> print(movies)
+['God Father', 1976, 'Inception', 1996, 'Rush our', 2011]
+>>> print(movies[0])
+God Father
+>>> print(movies[0,1])
+Traceback (most recent call last):
+  File "<pyshell#17>", line 1, in <module>
+    print(movies[0,1])
+TypeError: list indices must be integers, not tuple
+>>> for i in movies:
+	print(i)
+
+	
+God Father
+1976
+Inception
+1996
+Rush our
+2011
+>>> for i in movies:
+	print(1,i)
+
+	
+1 God Father
+1 1976
+1 Inception
+1 1996
+1 Rush our
+1 2011
+>>> count = 0
+>>> while count < len(movies):
+	print(movies[count])
+	count +=1
+
+	
+God Father
+1976
+Inception
+1996
+Rush our
+2011
+>>> count =1
+>>> while count < len(movies):
+	print(movies[count])
+	count +=1
+
+	
+1976
+Inception
+1996
+Rush our
+2011
+>>> #lets Move to chapter1_4
+>>> #let makes complcate to the list. For instance we can add lists in to the
+>>> #l'st
+>>> movies = ["God Father", "Inception", "Rush our"]
+>>> movies = ["God Father",["Marlon Brando", "Al pacino" ], "Inception", [" Leonardo di caprio"], "Rush our", ["Jackie Chan"] ]
+>>> print(movies[3][1][]5)
+SyntaxError: invalid syntax
+>>> print(movies[3][1][][5])
+SyntaxError: invalid syntax
+>>> print(movies[3][1][5])
+Traceback (most recent call last):
+  File "<pyshell#38>", line 1, in <module>
+    print(movies[3][1][5])
+IndexError: list index out of range
+>>> # You can print every single items in to the list seperately
+>>> for each_item in movies:
+	print(each_item)
+
+	
+God Father
+['Marlon Brando', 'Al pacino']
+Inception
+[' Leonardo di caprio']
+Rush our
+['Jackie Chan']
+>>> # It doesnt work very well. I mean that it doesnt give exact output what we want
+>>> for each_item in movies:
+	if isinstance(each_item, list)
+	
+SyntaxError: invalid syntax
+>>> for each_item in movies:
+    if isinstance(each_item, list):
+        for nested_item in each_item:
+            print(nested_item)
+    else:
+        print(each_item)
+
+        
+God Father
+Marlon Brando
+Al pacino
+Inception
+ Leonardo di caprio
+Rush our
+Jackie Chan
+>>> #these are exactly what we want
+>>> for each_item in movies:
+    if isinstance(each_item, list):
+        for nested_item in each_item:
+            if isinstance(nested_item, list):
+                for deeper_item in nested_item:
+                    print(deeper_item)
+            else:
+                print(nested_item)
+    else:
+        print(each_item)
+
+God Father
+Marlon Brando
+Al pacino
+Inception
+ Leonardo di caprio
+Rush our
+Jackie Chan
+>>> #enes Kemal Ergin Gives the last code for obtain more exactly (!) consequences :D
+>>> 
