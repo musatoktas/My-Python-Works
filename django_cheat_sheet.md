@@ -1,5 +1,8 @@
+<h1>Installation</h1>
+
 I will write all of the codes that needed for install Python Django Web App Development Framework. There will be no long story descriptions because this is CheatSheet.
 
+Before all of these you need to get pip and open your command prompt or terminal
 
 Start with installing Virtual Environment<br/>
 
@@ -27,3 +30,4 @@ python manage.py createsuperuser #note your username&password youll login from y
 python manage.py runserver #now all of boileplate is ready
 
 ```
+Now you are ready to go!
