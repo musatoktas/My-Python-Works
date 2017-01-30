@@ -511,6 +511,29 @@ if int(number) == 0:
 
 `raw_input`<span class="Apple-converted-space"> </span>asks the user for input and returns it as a string. But we're going to want to use integers for our guesses! To do this, we'll wrap the<span class="Apple-converted-space"> </span>`raw_input`s with<span class="Apple-converted-space"> </span>`int()`<span class="Apple-converted-space"> </span>to convert the string to an integer.
 
+<h1>Loops</h1> 
+
+**While-Do**<br/>
+```
+loop_condition = True
+
+while loop_condition:
+    print "I am a loop"
+    loop_condition = False
+```
+<note>**Breaking the Loop**</note>
+```
+while True:
+    print count
+    count += 1
+    if count >= 10:
+        break
+```
+<h2>Taking an Integer Input</h2>
+`guess = int(raw_input("Your guess: "))`<br/>
+Remember, raw_input turns user input into a string, so we use int() to make it a number again.
+<h2>Enumerate Function</h2>
+`enumerate`<span style="color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;, &quot;Hevetica Neue&quot;, Helvetica, sans-serif; font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); display: inline !important; float: none;"><span class="Apple-converted-space"> </span>works by supplying a corresponding index to each element in the list that you pass it. Each time you go through the loop,<span class="Apple-converted-space"> </span></span>`index`<span style="color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;, &quot;Hevetica Neue&quot;, Helvetica, sans-serif; font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); display: inline !important; float: none;"><span class="Apple-converted-space"> </span>will be one greater, and<span class="Apple-converted-space"> </span></span>`item`<span style="color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;, &quot;Hevetica Neue&quot;, Helvetica, sans-serif; font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); display: inline !important; float: none;"><span class="Apple-converted-space"> </span>will be the next item in the sequence. It's very similar to using a normal<span class="Apple-converted-space"> </span></span>`for`<span style="color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;, &quot;Hevetica Neue&quot;, Helvetica, sans-serif; font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); display: inline !important; float: none;"><span class="Apple-converted-space"> </span>loop with a list, except this gives us an easy way to count how many items we've seen so far.</span>
 
 
 
