@@ -31,3 +31,87 @@ python manage.py runserver #now all of boileplate is ready
 
 ```
 Now you are ready to go!
+
+<h1>Start App</h1>
+
+for start new app in django project
+
+`python migrate.py startapp merhaba`
+
+urls.py dosyasina yazilacaklar
+```
+from django.conf.urls import url
+from django.contrib import admin
+from django.conf.urls import include
+
+urlpatterns = [ 
+  url(r'^admin/', admin.site.urls),
+  url(r'^', include('merhaba.urls'))
+]
+```
+Ikinci olusturulan app te ulrs.py olustur. Django sadece ilk oluşturulan appte yapar.
+
+```
+from django.conf.urls import include, url 
+from merhaba import views
+
+urlpatterns = [
+  url('r^$', views.merhaba)
+  url('r^$merhaba', views.merhaba_html)
+]
+```
+<h2>views.py</h2> 
+İlk
+```
+from django.http import HttpResponse
+from django.shortcuts import render
+
+def merhaba(request)
+  print ("merhaba")
+  return HttpResponse("Merhaba")
+```
+Ikinicisi
+```
+def merhaba(request):
+  print("body: %s" % request.body)
+  print("path: %s" % request.path)
+  print("content_type %s" % request.content_try)
+  print("META %s" %request.META)
+  return HttpResponse("merhaba")
+```
+Üçüncüsü
+```
+def toplama(request):
+  sayi1 = 10
+  sayi2 = 20
+  return HttpResponse(sayi1+sayi2)
+```
+Dördüncü
+
+```
+def toplama(request):
+  sayi1 = 10
+  sayi2 = 20
+  return HttpResponse(sayi1+sayi2)
+```
+Beşincisi
+
+```
+def merhaba_html(request)
+  response = HttpResponse()
+  response.write("<h1>Django Kursu</h1>")
+  response.write("<p>alademik bilisim</p>")
+  return response
+```
+
+<h2>Test Methodu</h2>
+<strong>Unit Test</strong>
+```
+from django import TestCase
+class MerhabaViewTest(TestCase):
+def test_toplama(self):
+  response = self.client.get("/toplama")
+  self.assertEqual(response.content, b'30')
+```
+<li>url kisminda ab yi silcez. byte string gibi string cesitleri var. toplama bolumunde b'30' bekleniyor.</li>
+  
