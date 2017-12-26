@@ -106,6 +106,7 @@ def merhaba_html(request)
 
 <h2>Test Methodu</h2>
 <strong>Unit Test</strong>
+
 ```
 from django import TestCase
 class MerhabaViewTest(TestCase):
@@ -113,5 +114,6 @@ def test_toplama(self):
   response = self.client.get("/toplama")
   self.assertEqual(response.content, b'30')
 ```
+
 <li>Delete ab part inthe url part. There are several string types exists like byte string. In total b'30' is expecting.</li>
   
