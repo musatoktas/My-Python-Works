@@ -38,7 +38,7 @@ for start new app in django project
 
 `python migrate.py startapp merhaba`
 
-urls.py dosyasina yazilacaklar
+urls.py staff
 ```
 from django.conf.urls import url
 from django.contrib import admin
@@ -49,7 +49,7 @@ urlpatterns = [
   url(r'^', include('merhaba.urls'))
 ]
 ```
-Ikinci olusturulan app te ulrs.py olustur. Django sadece ilk oluşturulan appte yapar.
+In the second app make a new urls.py file. Django just make it once project just built.
 
 ```
 from django.conf.urls import include, url 
@@ -61,7 +61,8 @@ urlpatterns = [
 ]
 ```
 <h2>views.py</h2> 
-İlk
+First
+
 ```
 from django.http import HttpResponse
 from django.shortcuts import render
@@ -70,7 +71,7 @@ def merhaba(request)
   print ("merhaba")
   return HttpResponse("Merhaba")
 ```
-Ikinicisi
+Second
 ```
 def merhaba(request):
   print("body: %s" % request.body)
@@ -79,14 +80,14 @@ def merhaba(request):
   print("META %s" %request.META)
   return HttpResponse("merhaba")
 ```
-Üçüncüsü
+Third
 ```
 def toplama(request):
   sayi1 = 10
   sayi2 = 20
   return HttpResponse(sayi1+sayi2)
 ```
-Dördüncü
+Forth
 
 ```
 def toplama(request):
@@ -94,8 +95,7 @@ def toplama(request):
   sayi2 = 20
   return HttpResponse(sayi1+sayi2)
 ```
-Beşincisi
-
+Fifth
 ```
 def merhaba_html(request)
   response = HttpResponse()
@@ -113,5 +113,5 @@ def test_toplama(self):
   response = self.client.get("/toplama")
   self.assertEqual(response.content, b'30')
 ```
-<li>url kisminda ab yi silcez. byte string gibi string cesitleri var. toplama bolumunde b'30' bekleniyor.</li>
+<li>Delete ab part inthe url part. There are several string types exists like byte string. In total b'30' is expecting.</li>
   
