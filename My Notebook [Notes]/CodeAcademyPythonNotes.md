@@ -4,14 +4,14 @@
     #Hash mark is comment tag for python
     """ for multiple line comment dont be afraid to use triple quotation mark!"""
 
-###Boolean  Syntax
+### Boolean  Syntax
 
     a = True
     b= False
 
 Its the simplest language I ever seen before!
 
-###Basic Math
+### Basic Math
 
 You are eligible to do addition substraction multiplication and division on the Python.
 
