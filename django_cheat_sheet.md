@@ -19,7 +19,7 @@ Install Django into the venv<br/>
 `pip install django==1.8`
 
 ```
-python .\Scripts\django-admin.py startproject test_project
+django-admin.py startproject test_project
 
 cd test_project
 
