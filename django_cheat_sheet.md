@@ -116,4 +116,22 @@ def test_toplama(self):
 ```
 
 <li>Delete ab part inthe url part. There are several string types exists like byte string. In total b'30' is expecting.</li>
-  
+  Template directory settings in settings.py;
+```
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [os.path.join(os.path.dirname(__file__), 'templates'),
+                 os.path.join(os.path.dirname(__file__), 'static'), ],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+]
+```
