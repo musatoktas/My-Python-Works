@@ -116,7 +116,10 @@ def test_toplama(self):
 ```
 
 <li>Delete ab part inthe url part. There are several string types exists like byte string. In total b'30' is expecting.</li>
-  Template directory settings in settings.py;
+  
+  
+### Template directory settings in settings.py;
+
 ```
 TEMPLATES = [
     {
